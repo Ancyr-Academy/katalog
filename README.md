@@ -11,6 +11,9 @@ Les katas sont triés par ordre de difficulté. Elle est déterminée par la com
 design final du programme et la richesse des règles métier.
 
 ## Katas
+### Facile
+
+- [washing-machine](washing-machine/README.md)
 
 ### Difficile
 
