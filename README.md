@@ -1,14 +1,20 @@
 # Katalog
 
-Ce repository recense différents katas à réaliser.
+Ce repository recense différents katas inventés ou ré-inventés par AncyrAcademy.
 Ces katas ont les propriétés suivantes :
 
-- Ce sont des applications riches, pas seulement des exercices
-- Elles présentent différentes difficultés et permettent de travailler  différents aspects du métier
-- Elles ont pour objectif d'affiner vos compétence de design
+- Ils ont pour but de vous aider à développer vos compétences en design orienté objet
+- Ils sont représentatives de problèmes réels
+- Ils représentent une réelle difficulté de design logiciel
+- Ils travaillent différents aspects du design logiciel
 
-Les katas sont triés par ordre de difficulté. Elle est déterminée par la complexité que peut avoir le 
-design final du programme et la richesse des règles métier.
+Quelques conseils : 
+- Pensez en terme de Domain Modeling, créez un modèle riche avec des objets riches
+- Minimiser l'utilisation des getters et supprimez celle des setters
+- Répartissez soigneusement les responsabilités entre les objets
+- Pratiquez en outside-in si vous faites du TDD
+- En fait, faites tous les katas en TDD, c'est mieux pour vous !
+
 
 ## Katas
 ### Facile
