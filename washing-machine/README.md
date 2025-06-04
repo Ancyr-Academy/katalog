@@ -15,4 +15,4 @@ Tout ce que le programme doit faire, c'est
 
 # Notes
 
-C'est un bon exercice pour explorer Polymorphism vs [Double Dispatch](https://en.wikipedia.org/wiki/Double_dispatch)
+C'est un bon exercice pour explorer le polymorphisme et le [Double Dispatch](https://en.wikipedia.org/wiki/Double_dispatch)
