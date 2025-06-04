@@ -1,6 +1,7 @@
 # Opera Kata
 
-## Métier
+L'opéra de Paris vous demande de réaliser une application permettant à son personnel de gérer la
+réservation de places d'opéra.
 
 Dans cet opéra, il y a 3 types emplacement dans lesquels on peut réserver des places :
 - **L'Orchestre**, organisé en 12 rangées de 12 places
@@ -8,19 +9,25 @@ Dans cet opéra, il y a 3 types emplacement dans lesquels on peut réserver des 
 - Le **Balcon**, dont la topologie diffère un peu : elle est organisée en 5 rangées de 10 places, mais également de 12 loges.
   Ces loges sont chacune composées de 5 places.
 
+# Compétences développées
+
+- Test-Driven Development par incrément de valeur
+- Domain-Driven Design avec un Domain Model riche
+- Design Patterns (Strategy)
+- Design Orienté Objet
+
+# Exercices
+
 ## Niveau 1
 
 ### Description
-
-L'opéra de Paris vous demande de réaliser une application permettant à son personnel de gérer la
-réservation de places d'opéra.
 
 Lorsqu'un usager se présente au comptoir, il peut informer le personnel de la réservation qu'il désire faire. L'algorithme
 se charge ensuite de trouver les places correspondant à sa demande.
 
 Sa demande contient :
 - le nombre de places qu'il souhaite, entre 1 et 5
-- une préférence entre `Balcon`, `Orchestre` ou `Corbeille`
+- l'emplacement, soit `Balcon`, `Orchestre` ou `Corbeille`
 - une préférence entre `avant` ou `arrière` pour l'orchestre, la corbeille et les rangées du Balcon
 - S'il choisit Balcon, il peut préciser s'il veut absolument une loge ou non. S'il désire une loge, alors l'algorithme doit
 lui servir une loge à condition qu'une loge soit disponible. Sinon, l'algorithme doit chercher dans les rangées du balcon,

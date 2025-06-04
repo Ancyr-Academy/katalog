@@ -13,6 +13,9 @@ Tout ce que le programme doit faire, c'est
 - Déterminer la température, la durée et la vitesse de rotation en fonction du type de vêtement
 - Laver les vêtements
 
-# Notes
 
-C'est un bon exercice pour explorer le polymorphisme et le [Double Dispatch](https://en.wikipedia.org/wiki/Double_dispatch)
+# Compétences développées
+
+- Design Orienté Objet
+- Double Dispatch
+- Polymorphisme
