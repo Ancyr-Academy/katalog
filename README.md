@@ -20,6 +20,7 @@ Quelques conseils :
 ### Facile
 
 - [washing-machine](washing-machine/README.md)
+- [schifumi](schifumi/README.md)
 
 ### Moyen
 
