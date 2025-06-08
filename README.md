@@ -19,18 +19,18 @@ Quelques conseils :
 ## Katas
 ### Facile
 
-- [washing-machine](washing-machine/README.md)
-- [schifumi](schifumi/README.md)
+- [Washing Machine](easy/washing-machine/README.md)
+- [Schifumi](easy/schifumi/README.md)
 
 ### Moyen
 
-- [opera](opera/README.md)
+- [Opéra](medium/opera/README.md)
 
 ### Avancé
 
-A venir
+- [Système de Paie](advanced/payroll/README.md)
 
 ### Expert
 
-- [moveo](moveo/README.md)
-- [impots](impots/README.md)
+- [Moveo](expert/moveo/README.md)
+- [Impôts](expert/impots/README.md)
