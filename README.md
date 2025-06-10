@@ -24,6 +24,7 @@ Quelques conseils :
 - [FizzBuzz](easy/fizzbuzz/README.md)
 - [Stack](easy/stack/README.md)
 - [Bowling](easy/bowling/README.md)
+- [Pendu](easy/pendu/README.md)
 
 ### Moyen
 
