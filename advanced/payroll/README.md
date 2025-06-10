@@ -13,7 +13,7 @@ L'application est utilisée par un administrateur système pour gérer ses emplo
 - Certains employés ont un salaire fixe mensuel, ils sont payés une fois par mois.
 - Certains salariés sont payés à la commission. Ils touchent un pourcentage sur les ventes qu'ils réalisent. Le pourcentage varie d'un employé à l'autre.
 - Ils soumettent chaque jour un rapport de toutes les ventes réalisées ce jour là.
-- Ils sont payés chaque Vendredi.
+- Ils sont payés un Vendredi sur deux.
 - Chaque employé peut avoir une méthode de paiement différente
   - Certains recoivent un chèque directement remis en main propre
   - D'autres reçoivent un virement bancaire
