@@ -21,6 +21,9 @@ Quelques conseils :
 
 - [Washing Machine](easy/washing-machine/README.md)
 - [Schifumi](easy/schifumi/README.md)
+- [FizzBuzz](easy/fizzbuzz/README.md)
+- [Stack](easy/stack/README.md)
+- [Bowling](easy/bowling/README.md)
 
 ### Moyen
 
