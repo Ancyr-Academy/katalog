@@ -67,8 +67,8 @@ Le système ne doit plus seulement retourner un simple nombre mais un rapport un
 - Le montant déjà payé
 - Le montant restant à payer
 
-La base imposable est la somme des revenus soumis à imposition, soit les revenus du citoyen au delà des 10_000 Borgis
-(puisque les 10_000 premiers Borgis ne sont pas imposables)
+La base imposable est la somme des revenus soumis à imposition, soit les revenus du citoyen au delà des 10 000 Borgis
+(puisque les 10 000 premiers Borgis ne sont pas imposables)
 
 ### Note
 
@@ -84,8 +84,8 @@ Certains salariés peuvent bénéficier de réductions d'impôts. Ces réduction
 Cette réduction d'impôt est directement soustraite du montant total à payer.
 
 Il existe deux types de réduction : 
-- **Les réductions fixes** : par exemple, 500 Borgis
-- **Les réductions au prorata** : par exemple, 20%
+- **Les réductions fixes** : par exemple, 100 Borgis.
+- **Les réductions au prorata** : par exemple, 20% de l'impôt à payer.
 
 Pour information, le flux de calcul de l'impôt est le suivant :
 - Calcul de l'impôt brut
@@ -98,6 +98,13 @@ Exemple : si le citoyen doit payer 300 Borgis mais bénéficie d'une réductiode
 sera pas remboursé de 200 Borgis (la différence entre 500 et 300).
 
 Le rapport doit également mentionner le montant total des réductions appliquées.
+
+## Niveau 3.1 - Prorata maximale
+
+Il n'est désormais possible d'appliquer qu'une seule réduction au prorata. Si plusieurs sont fournies, la plus élevée
+est prise en compte.
+
+De plus, cette réduction doit-être appliquée en premier, avant les réductions fixe.
 
 ## Niveau 4 - Déductions d'impôts conditionnelles
 
