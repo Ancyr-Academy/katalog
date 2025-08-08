@@ -60,14 +60,32 @@ class TaxSystem {
 }
 ```
 
+## Niveau 2.1 - Rapport complet
+
+Le système ne doit plus seulement retourner un simple nombre mais un rapport un peu plus complet du calcul :
+- La base imposable retenue
+- Le montant déjà payé
+- Le montant restant à payer
+
+La base imposable est la somme des revenus soumis à imposition, soit les revenus du citoyen au delà des 10_000 Borgis
+(puisque les 10_000 premiers Borgis ne sont pas imposables)
+
+### Note
+
+Notez que l'interface de la classe TaxCalculator évolue beaucoup. **Si vous développez en TDD/BDD, vous avez probablement
+dû mettre à jour beaucoup de tests à chaque niveau.**
+
+Et ça ne va pas s'améliorer avec les niveaux à venir. Que pourriez-vous faire pour réduire l'impact de l'évolution du
+design sur vos tests ? :)
+
 ## Niveau 3 - Réductions d'impôts
 
 Certains salariés peuvent bénéficier de réductions d'impôts. Ces réductions sont fournis en paramètre d'entrée du `TaxCalculator`.
 Cette réduction d'impôt est directement soustraite du montant total à payer.
 
 Il existe deux types de réduction : 
-- Les réductions fixes : par exemple, 500 Borgis
-- Les réductions au prorata : par exemple, 20%
+- **Les réductions fixes** : par exemple, 500 Borgis
+- **Les réductions au prorata** : par exemple, 20%
 
 Pour information, le flux de calcul de l'impôt est le suivant :
 - Calcul de l'impôt brut
@@ -79,17 +97,15 @@ Notez que les réductions ne peuvent aboutir à un impôt négatif.
 Exemple : si le citoyen doit payer 300 Borgis mais bénéficie d'une réductiode 500 Borgis, il paiera 0 Borgis mais il ne 
 sera pas remboursé de 200 Borgis (la différence entre 500 et 300).
 
+Le rapport doit également mentionner le montant total des réductions appliquées.
+
 ## Niveau 4 - Déductions d'impôts conditionnelles
 
 Les déductions d'impôts sont conditionnelles. 
 
 - Certaines déductions s'appliquent en toutes circonstances
 - D'autres ne s'appliquent que si le montant à payer est supérieur à un seuil
-- D'autres uniquement si le montant imposable est inférieur à un seuil
-
-Le montant imposable est la somme des revenus soumis à imposition, soit les revenus du citoyen au delà des 10_000 Borgis
-(puisque les 10_000 premiers Borgis ne sont pas imposables)
-
+- D'autres uniquement si la base imposable est inférieure à un seuil
 
 ## Niveau 5 - Plafonnement des réductions d'impôts
 
