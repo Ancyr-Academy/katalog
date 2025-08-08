@@ -22,7 +22,12 @@ L'impôt à payer dépend du revenu imposable de la personne et repose sur un sy
 - De 30 001 à 50 000 Borgis, l'impôt est de 25%
 - Au delà de 50 000 Borgis, l'impôt est de 30%
 
-Le calcul de l'impôt se fait sur le revenu imposable de l'année précédente.
+Par exemple, si le revenu du citoyen est de 28 000 Borgis
+- Les 10 000 premiers Borgis ne sont pas imposés
+- Les 10 000 suivants sont imposés à 10%
+- Les 8 000 suivants sont imposés à 18%
+
+Notez bien que l'imposition s'applique sur la tranche concernée.
 
 ## Niveau 1 - Calcul de l'impôt
 
@@ -42,21 +47,49 @@ class TaxSystem {
 Certains salariés ont opté pour le prélèvement à la source et paient déjà une partie de leur impôt chaque mois. 
 Retranchez l'impôt déjà payé du montant à payer.
 
+Vous représentez le système des impôts, donc il s'agit d'une information que vous avez déjà dans votre base de données. 
+Utilisez l'ID de l'utilisateur pour faire la liaison entre le montant déjà réglé et l'utilisateur.
+
+```ts 
+interface PaymentRepository {
+  // Methods
+}
+
+class TaxSystem {
+  private readonly paymentsRepository: PaymentRepository;
+}
+```
+
 ## Niveau 3 - Réductions d'impôts
 
-Certains salariés peuvent bénéficier de réductions d'impôts.
-Certaines réductions sont fixes (par exemple, 500 Borgis) et d'autres sont proportionnelles au revenu imposable (par exemple, 5% du revenu imposable).
-Représentez cette notion dans le calcul de l'impôt.
+Certains salariés peuvent bénéficier de réductions d'impôts. Ces réductions sont fournis en paramètre d'entrée du `TaxCalculator`.
+Cette réduction d'impôt est directement soustraite du montant total à payer.
+
+Il existe deux types de réduction : 
+- Les réductions fixes : par exemple, 500 Borgis
+- Les réductions au prorata : par exemple, 20%
 
 Pour information, le flux de calcul de l'impôt est le suivant :
 - Calcul de l'impôt brut
 - Retranchement de l'impôt déjà payé
 - Application des réductions d'impôts
 
+Notez que les réductions ne peuvent aboutir à un impôt négatif.
+
+Exemple : si le citoyen doit payer 300 Borgis mais bénéficie d'une réductiode 500 Borgis, il paiera 0 Borgis mais il ne 
+sera pas remboursé de 200 Borgis (la différence entre 500 et 300).
+
 ## Niveau 4 - Déductions d'impôts conditionnelles
 
-Certaines déductions d'impôts sont conditionnelles. Par exemple, elles ne s'applique que si le revenu imposable (avant toutes déductions) 
-est inférieur à un certain seuil.
+Les déductions d'impôts sont conditionnelles. 
+
+- Certaines déductions s'appliquent en toutes circonstances
+- D'autres ne s'appliquent que si le montant à payer est supérieur à un seuil
+- D'autres uniquement si le montant imposable est inférieur à un seuil
+
+Le montant imposable est la somme des revenus soumis à imposition, soit les revenus du citoyen au delà des 10_000 Borgis
+(puisque les 10_000 premiers Borgis ne sont pas imposables)
+
 
 ## Niveau 5 - Plafonnement des réductions d'impôts
 
