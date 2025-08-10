@@ -151,6 +151,9 @@ Tous les entrepreneurs **sont exempts d'impôts la première année d'activité*
 
 Vous avez déjà dans votre base de données les informations sur les citoyens de Borginie, il vous suffit de la récupérer avec un repository.
 
+Notez que la déclaration de l'entreprise **ne peut survenir que l'année suivant sa création.** Si elle a été créée en 2023, elle 
+ne peut pas participer à la déclaration des revenues 2023 (pour l'année 2022).
+
 ## Niveau 6.3 - Activités multiples
 
 Les entrepreneurs peuvent **cumuler plusieurs activités entreprenariales distinctes**. Chaque activité est soumis à son
