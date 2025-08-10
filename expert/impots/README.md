@@ -159,6 +159,13 @@ propre abattement car elles peuvent avoir un nombre différent d'années d'activ
 L'utilisateur doit déclarer les revenus pour chacune de ses entreprises. Si un revenu manque, le formulaire est rejeté
 et doit-être recommencé.
 
+L'utilisateur fourni également l'ID de l'entreprise en plus de la déclaration de revenues.
+
+## Niveau 6.4 - Revenues multiple par activités
+
+Une même activité peut **déclarer plusieurs types de revenues.**
+Une entreprise peut donc déclarer un revenu commercial ainsi qu'un revenu de prestation de service.
+
 ## Niveau 7 - Actionnaires
 
 Certains citoyens de Borginie sont également actionnaires et perçoivent des dividendes.
