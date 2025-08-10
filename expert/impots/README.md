@@ -29,6 +29,11 @@ Par exemple, si le revenu du citoyen est de 28 000 Borgis
 
 Notez bien que l'imposition s'applique sur la tranche concernée.
 
+Ce kata long et complexe est divisée en 2 sections. Vous pouvez vous arrêter à la fin de la première section, mais il est
+encouragé de faire les deux.
+
+# Section 1 - Salariés
+
 ## Niveau 1 - Calcul de l'impôt
 
 Tous les citoyens de Borginie sont des salariés et ont une fiche de paie `PaySlip` qui indique leur revenu imposable.
@@ -118,25 +123,41 @@ Les déductions d'impôts sont conditionnelles.
 
 Les réductions d'impôts sont plafonnés à 1 271 Borgis. L'accumulation de toutes les réductions d'impôts ne peut pas dépasser ce montant.
 
+# Section 2 - Entrepreneurs
+
 ## Niveau 6 - Entreprenariat
 
-Certains citoyens de Borginie, en plus d'être salariés, sont également entrepreneur individuel. 
-Les revenus de leur activité d'entrepreneur sont également soumis à l'impôt sur le revenu, mais avec un taux différent.
-Il existe deux types d'activité : les prestations de services et les activités commerciales.
+Certains citoyens de Borginie, en plus d'être salariés, **sont également entrepreneurs**. 
+Les revenus de leur activité d'entrepreneur sont également soumis à l'impôt sur le revenu.
 
-Pour calculer le montant pris en compte dans l'impôt à payer, il faut appliquer un abattement.
-- de 34% pour les prestations de services
-- de 71% pour les activités commerciales
+Le fonctionnement est le suivant :
+- L'entrepreneur déclare ses revenus issus des activités entreprenarial **en paramètre d'entrée du système**
+- Un abattement forfaitaire de 34% est appliqué, c'est à dire que **seulement 66% de ces revenus sont imposables**
+- Après abattement, le revenu est ajouté à son revenu total
+- Le reste du calcul reste le même
 
-Un exemple : si l'entrepreneur a gagné 10 000 Borgis en prestations de services, seul 6 600 Borgis seront pris en compte dans le calcul de l'impôt.
-Autre exemple : si l'entrepreneur a gagné 10 000 Borgis en activités commerciales, seul 2 900 Borgis seront pris en compte dans le calcul de l'impôt.
+## Niveau 6.1 - Types d'entreprenariats
 
-Le flux de calcul de l'impôt est le suivant :
+Il existe deux types d'activité : **les prestations de services** et **les activités commerciales**.
+L'utilisateur doit à la fois entrer la somme de ses revenus relevant des prestations de services et celle relevant
+de ses activités commerciales, car l'abattement forfaitaire n'est pas le même.
 
-Pour information, le flux de calcul de l'impôt est le suivant :
-- Calcul de l'impôt brut (salaire + revenus d'entrepreneur)
-- Retranchement de l'impôt déjà payé
-- Application des réductions d'impôts
+- Dans le cas de la **prestation de service**, l'abattement reste de 34%
+- Dans le cas **d'activité commerciale**, l'abattement est de 71%
+
+## Niveau 6.2 - Années d'activités
+
+Tous les entrepreneurs **sont exempts d'impôts la première année d'activité**. 
+
+Vous avez déjà dans votre base de données les informations sur les citoyens de Borginie, il vous suffit de la récupérer avec un repository.
+
+## Niveau 6.3 - Activités multiples
+
+Les entrepreneurs peuvent **cumuler plusieurs activités entreprenariales distinctes**. Chaque activité est soumis à son
+propre abattement car elles peuvent avoir un nombre différent d'années d'activités
+
+L'utilisateur doit déclarer les revenus pour chacune de ses entreprises. Si un revenu manque, le formulaire est rejeté
+et doit-être recommencé.
 
 ## Niveau 7 - Actionnaires
 
@@ -157,7 +178,8 @@ Pour information, le flux de calcul de l'impôt est le suivant :
 ## Niveau 8 - Réductions Locales
 
 Pour encourager l'activité entreprenariale, la Borginie a mis en place un système de réduction d'impôts locales.
-Ces réductions ne sont appliqués qu'au revenu issus de l'activité d'entrepreneur.
+Ces réductions ne sont appliqués qu'aux revenus entreprenariales. Notez que chaque entreprise du citoyen peut-être localisée
+dans une ville différente. **C'est la ville de l'entreprise qui détermine l'impôt, pas la ville de résidence du citoyen**.
 
 Voici les règles selon les villes de Borginie :
 - Amb : l'abattement forfaitaire est de 50% pour les prestations de services et de 90% pour les activités commerciales
@@ -165,12 +187,3 @@ Voici les règles selon les villes de Borginie :
 - Borginopolis : l'abattement forfaitaire dépend à la fois du nombre d'année d'activité et du type d'activité :
   - Pour les prestations de services, l'abattement est de 100% la première année, 70% la deuxième année, 34% les années suivantes.
   - Pour les activités commerciales, l'abattement est de 100% la première année, 90% la deuxième année, 71% les années suivantes.
-
-## Niveau 9 - Impots supplémentaires
-
-Les citoyens de Borginie doivent également payer un impôt sur :
-
-**Les cryptomonnaies** : un impôt fixe de 25% est appliqué sur les gains réalisés lors de la vente de cryptomonnaies.
-
-**Investissements immobiliers** : un impôt fixe de 17% est appliqué sur les revenus locatifs. Au delà de 20 000 Borgis de revenus locatifs, l'impôt est de 25%. 
-Notez que le pourcentage n'est pas progressif. Sur 15 000 Borgis de revenus locatifs, l'impôt est fixé à 17% du total mais sur 25 000 Borgis, l'impôt est de 25% du total.
