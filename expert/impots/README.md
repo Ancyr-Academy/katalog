@@ -116,7 +116,7 @@ Les déductions d'impôts sont conditionnelles.
 
 ## Niveau 5 - Plafonnement des réductions d'impôts
 
-Les réductions d'impôts sont plafonnés à 3 871 Borgis. L'accumulation de toutes les réductions d'impôts ne peut pas dépasser ce montant.
+Les réductions d'impôts sont plafonnés à 1 271 Borgis. L'accumulation de toutes les réductions d'impôts ne peut pas dépasser ce montant.
 
 ## Niveau 6 - Entreprenariat
 
