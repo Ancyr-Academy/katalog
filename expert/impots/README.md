@@ -209,7 +209,7 @@ Désormais, ce taux varie selon la ville où se situe l'entreprise :
 - **Borginopolis** : règle avancée
   - **Prestations de services** : 100% d'abattement la première année, 70% la 2e, puis 34% les années suivantes
   - **Prestations commerciales** : 100% d'abattement la première année, 87% la 2e, puis 71% les années suivantes
-- **Autres villes** : 34% pour les prestations de service, 71% pour les prestations commerciales
+- **Autres villes** : 100% d'abattement la première année, puis 34% pour les prestations de service et 71% pour les prestations commerciales les années suivantes
 
 ## Niveau 8.2 - Dividendes
 
