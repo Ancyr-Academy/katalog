@@ -171,29 +171,51 @@ Une entreprise peut donc déclarer un revenu commercial ainsi qu'un revenu de pr
 
 ## Niveau 7 - Actionnaires
 
-Certains citoyens de Borginie sont également actionnaires et perçoivent des dividendes.
-Lorsqu'un citoyen perçoit des dividendes, il doit payer un impôt fixe de 30% sur le montant des dividendes perçus.
+Les citoyens de Borgini peuvent également avoir des entreprises qui sont soumis à un régime d'imposition différent. 
+Les détails de ce régime ne sont pas gérés dans notre système. Cependant, ces citoyens peuvent percevoir des dividendes
+de la part de ces entreprises.
 
-Donc si un citoyen perçoit 1 000 Borgis de dividendes, il doit payer 300 Borgis d'impôt.
+Ils doivent donc déclarer les dividendes qu'ils ont perçu, et ce par entreprise.
 
-Notez qu'il s'agit de payer 300 Borgis d'impôts peu importe le montant de l'impôt déjà payé ou les réductions d'impôts.
-Ce montant est fixe et ne dépend pas du revenu imposable.
+30% de ces dividendes se rajoutent à l'impôt final, sans être éligible à une quelconque réduction d'impôt.
 
-Pour information, le flux de calcul de l'impôt est le suivant :
+Ainsi, si un citoyen touche 1 000 Borgi de dividendes, il devra payer 300 Borgi d'impôts, inconditionnellement.
+
+Pour rappel, le flux de calcul de l'impôt est le suivant :
 - Calcul de l'impôt brut (salaire + revenus d'entrepreneur)
 - Retranchement de l'impôt déjà payé
 - Application des réductions d'impôts
 - Ajout de l'impôt sur les dividendes
 
-## Niveau 8 - Réductions Locales
+## Niveau 8 - Règles locales
 
-Pour encourager l'activité entreprenariale, la Borginie a mis en place un système de réduction d'impôts locales.
-Ces réductions ne sont appliqués qu'aux revenus entreprenariales. Notez que chaque entreprise du citoyen peut-être localisée
-dans une ville différente. **C'est la ville de l'entreprise qui détermine l'impôt, pas la ville de résidence du citoyen**.
+Pour encourager l'activité entreprenariale, la Borginie a mis en place un système de calcul d'impôt local, ce qui signifie qu'il 
+est plus avantageux d'entreprendre dans certaines villes que dans d'autres. 
 
-Voici les règles selon les villes de Borginie :
-- Amb : l'abattement forfaitaire est de 50% pour les prestations de services et de 90% pour les activités commerciales
-- Tabhati : aucun impôt pendant les 3 premières années d'activité
-- Borginopolis : l'abattement forfaitaire dépend à la fois du nombre d'année d'activité et du type d'activité :
-  - Pour les prestations de services, l'abattement est de 100% la première année, 70% la deuxième année, 34% les années suivantes.
-  - Pour les activités commerciales, l'abattement est de 100% la première année, 90% la deuxième année, 71% les années suivantes.
+Notez que chaque entreprise peut-être localisée dans une ville différente. **C'est la ville de l'entreprise qui détermine l'impôt, pas la ville de résidence du citoyen**.
+
+### Astuce
+
+Analysez la variabilité, c'est-à-dire ce qui varie d'une ville à l'autre. Analysez également les informations dont vous avez besoin
+pour prendre des décisions dans chaque cas.
+
+## Niveau 8.1 - Abattement forfaitaire
+
+Actuellement, l'abattement forfaitaire est de 34% pour les prestations de service et 71% pour les prestations commerciales.
+Désormais, ce taux varie selon la ville où se situe l'entreprise : 
+
+- **Amb** : 25% pour les prestations de service et 51% pour les prestations commerciales
+- **Tabhati** : 100% d'abattement (aucun impot) pendant les 3 premières années d'activité
+- **Borginopolis** : règle avancée
+  - **Prestations de services** : 100% d'abattement la première année, 70% la 2e, puis 34% les années suivantes
+  - **Prestations commerciales** : 100% d'abattement la première année, 87% la 2e, puis 71% les années suivantes
+- **Autres villes** : 34% pour les prestations de service, 71% pour les prestations commerciales
+
+## Niveau 8.2 - Dividendes
+
+Le même principe s'applique pour les dividendes 
+
+- **Amb** : 25% de dividendes
+- **Tabhati** : aucun impot sur les dividendes pendant les 3 premières années puis 30% les années suivantes
+- **Borginopolis** : 15% sur les 40 000 premiers Borgis, puis 40% sur les autres
+- **Autres villes** : 30% 
